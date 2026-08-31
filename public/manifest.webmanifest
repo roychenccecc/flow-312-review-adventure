@@ -1,0 +1,38 @@
+{
+  "id": "./",
+  "name": "Flow｜312 心理学单机复习冒险",
+  "short_name": "Flow 312",
+  "description": "中英双语、离线优先的 312 心理学强化复习冒险。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#081728",
+  "theme_color": "#081728",
+  "categories": ["education", "games"],
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./og.png",
+      "sizes": "1731x909",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Flow 心境档案馆"
+    }
+  ]
+}
