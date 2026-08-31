@@ -3,6 +3,8 @@ import type { CSSProperties } from 'react';
 
 import type { PersonProfile } from '@/src/types/content';
 
+const portraitSheetUrl = `${import.meta.env.BASE_URL}assets/scholars/scholar-sheet.png`;
+
 interface ScholarPortraitProps {
   person: PersonProfile;
   className?: string;
@@ -43,7 +45,7 @@ export function ScholarPortrait({ person, className = '', compact = false }: Sch
           '--scholar-accent': person.accent,
           '--portrait-x': x,
           '--portrait-y': y,
-          '--portrait-sheet': "url('./assets/scholars/scholar-sheet.png')",
+          '--portrait-sheet': `url('${portraitSheetUrl}')`,
         } as CSSProperties
       }
       role="img"
