@@ -28,9 +28,16 @@ test('service worker precaches the shell and provides a navigation fallback', as
 test('GitHub Pages workflow verifies and publishes the exact dist directory', async () => {
   const workflow = await readFile('.github/workflows/deploy-pages.yml', 'utf8');
   assert.match(workflow, /npm run typecheck/);
+  assert.match(workflow, /npm run lint/);
   assert.match(workflow, /npm test/);
   assert.match(workflow, /npm run build/);
   assert.match(workflow, /path: dist/);
+});
+
+test('scholar sprite resolves from the configured Vite base path', async () => {
+  const portrait = await readFile('src/components/scholar-portrait.tsx', 'utf8');
+  assert.match(portrait, /import\.meta\.env\.BASE_URL/);
+  assert.doesNotMatch(portrait, /url\(['"]\.\/assets\/scholars/);
 });
 
 test('service worker serves the cached app shell after the network disappears', async () => {
